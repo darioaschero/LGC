@@ -1,0 +1,25 @@
+/* ============================================================
+   SEMANTIC — what components consume.
+   Mode (light/dark) handled via the CSS light-dark() function.
+   ============================================================ */
+
+:root {
+  /* Default: follow user's OS preference.
+     Override on <html data-mode="…"> below. */
+  color-scheme: light dark;
+
+  /* ── Surfaces ───────────────────────────────────────────── */
+  --bg:        light-dark(var(--color-neutral-0),   var(--color-neutral-1000));
+  --bg-subtle: light-dark(var(--color-neutral-100), var(--color-neutral-900));
+
+  /* ── Foreground ─────────────────────────────────────────── */
+  --fg:        light-dark(var(--color-neutral-900), var(--color-neutral-100));
+  --fg-muted:  light-dark(var(--color-neutral-600), var(--color-neutral-400));
+
+  /* ── Lines ──────────────────────────────────────────────── */
+  --border:    light-dark(var(--color-neutral-200), var(--color-neutral-800));
+}
+
+/* User override — flips light-dark() resolution for the whole tree. */
+[data-mode="light"] { color-scheme: light; }
+[data-mode="dark"]  { color-scheme: dark; }

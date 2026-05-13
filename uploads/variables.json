@@ -1,0 +1,4403 @@
+{
+  "version": "1.0.4",
+  "metadata": {},
+  "collections": [
+    {
+      "name": "Accent",
+      "modes": [
+        {
+          "name": "Defaut",
+          "variables": [
+            {
+              "name": "dark/bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "dark/bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "dark/bg/gradient-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/850"
+              }
+            },
+            {
+              "name": "dark/bg/gradient-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/950"
+              }
+            },
+            {
+              "name": "light/bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/red/50"
+              }
+            },
+            {
+              "name": "light/bg/gradient-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/red/300"
+              }
+            },
+            {
+              "name": "light/bg/gradient-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/fg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/950"
+              }
+            },
+            {
+              "name": "dark/fg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Stale+Red",
+          "variables": [
+            {
+              "name": "dark/bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/red/600"
+              }
+            },
+            {
+              "name": "dark/bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/slate/950"
+              }
+            },
+            {
+              "name": "dark/bg/gradient-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/slate/900"
+              }
+            },
+            {
+              "name": "dark/bg/gradient-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/red/600"
+              }
+            },
+            {
+              "name": "light/bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/slate/100"
+              }
+            },
+            {
+              "name": "light/bg/gradient-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/slate/200"
+              }
+            },
+            {
+              "name": "light/bg/gradient-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/fg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/red/600"
+              }
+            },
+            {
+              "name": "dark/fg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/red/500"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Sand+Red",
+          "variables": [
+            {
+              "name": "dark/bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/red/600"
+              }
+            },
+            {
+              "name": "dark/bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/sand/950"
+              }
+            },
+            {
+              "name": "dark/bg/gradient-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/sand/900"
+              }
+            },
+            {
+              "name": "dark/bg/gradient-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/red/600"
+              }
+            },
+            {
+              "name": "light/bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/sand/100"
+              }
+            },
+            {
+              "name": "light/bg/gradient-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/sand/200"
+              }
+            },
+            {
+              "name": "light/bg/gradient-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/fg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/red/600"
+              }
+            },
+            {
+              "name": "dark/fg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/red/500"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Lichen",
+          "variables": [
+            {
+              "name": "dark/bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/950"
+              }
+            },
+            {
+              "name": "dark/bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/100"
+              }
+            },
+            {
+              "name": "dark/bg/gradient-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/gradient-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/950"
+              }
+            },
+            {
+              "name": "light/bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/100"
+              }
+            },
+            {
+              "name": "light/bg/gradient-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/200"
+              }
+            },
+            {
+              "name": "light/bg/gradient-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/100"
+              }
+            },
+            {
+              "name": "light/fg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/950"
+              }
+            },
+            {
+              "name": "dark/fg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/950"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Linchen 2",
+          "variables": [
+            {
+              "name": "dark/bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/500"
+              }
+            },
+            {
+              "name": "dark/bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/950"
+              }
+            },
+            {
+              "name": "dark/bg/gradient-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/900"
+              }
+            },
+            {
+              "name": "dark/bg/gradient-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/600"
+              }
+            },
+            {
+              "name": "light/bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/50"
+              }
+            },
+            {
+              "name": "light/bg/gradient-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/100"
+              }
+            },
+            {
+              "name": "light/bg/gradient-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/50"
+              }
+            },
+            {
+              "name": "light/fg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/500"
+              }
+            },
+            {
+              "name": "dark/fg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/lichen/400"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Primitives",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "variables": [
+            {
+              "name": "color/neutral/0",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
+              "name": "color/neutral/50",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F2F2F2"
+            },
+            {
+              "name": "color/neutral/100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E3E3E3"
+            },
+            {
+              "name": "color/neutral/200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#CCCCCC"
+            },
+            {
+              "name": "color/neutral/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#ADADAD"
+            },
+            {
+              "name": "color/neutral/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#999999"
+            },
+            {
+              "name": "color/neutral/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#808080"
+            },
+            {
+              "name": "color/neutral/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#666666"
+            },
+            {
+              "name": "color/neutral/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#525252"
+            },
+            {
+              "name": "color/neutral/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#383838"
+            },
+            {
+              "name": "color/neutral/850",
+              "type": "color",
+              "isAlias": false,
+              "value": "#262626"
+            },
+            {
+              "name": "color/neutral/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1C1C1C"
+            },
+            {
+              "name": "color/neutral/950",
+              "type": "color",
+              "isAlias": false,
+              "value": "#0D0D0D"
+            },
+            {
+              "name": "color/neutral/1000",
+              "type": "color",
+              "isAlias": false,
+              "value": "#000000"
+            },
+            {
+              "name": "color/black-alpha/0",
+              "type": "color",
+              "isAlias": false,
+              "value": "#00000000"
+            },
+            {
+              "name": "color/black-alpha/50",
+              "type": "color",
+              "isAlias": false,
+              "value": "#0000000D"
+            },
+            {
+              "name": "color/black-alpha/100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#0000001C"
+            },
+            {
+              "name": "color/black-alpha/200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#00000033"
+            },
+            {
+              "name": "color/black-alpha/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#00000052"
+            },
+            {
+              "name": "color/black-alpha/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#00000066"
+            },
+            {
+              "name": "color/black-alpha/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#00000080"
+            },
+            {
+              "name": "color/black-alpha/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#00000099"
+            },
+            {
+              "name": "color/black-alpha/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#000000AD"
+            },
+            {
+              "name": "color/black-alpha/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#000000C7"
+            },
+            {
+              "name": "color/black-alpha/850",
+              "type": "color",
+              "isAlias": false,
+              "value": "#000000D9"
+            },
+            {
+              "name": "color/black-alpha/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#000000E3"
+            },
+            {
+              "name": "color/black-alpha/950",
+              "type": "color",
+              "isAlias": false,
+              "value": "#000000F2"
+            },
+            {
+              "name": "color/black-alpha/1000",
+              "type": "color",
+              "isAlias": false,
+              "value": "#000000"
+            },
+            {
+              "name": "color/white-alpha/0",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF00"
+            },
+            {
+              "name": "color/white-alpha/50",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF0D"
+            },
+            {
+              "name": "color/white-alpha/100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF1C"
+            },
+            {
+              "name": "color/white-alpha/200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF33"
+            },
+            {
+              "name": "color/white-alpha/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF52"
+            },
+            {
+              "name": "color/white-alpha/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF66"
+            },
+            {
+              "name": "color/white-alpha/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF80"
+            },
+            {
+              "name": "color/white-alpha/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF99"
+            },
+            {
+              "name": "color/white-alpha/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFFAD"
+            },
+            {
+              "name": "color/white-alpha/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFFC7"
+            },
+            {
+              "name": "color/white-alpha/850",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFFD9"
+            },
+            {
+              "name": "color/white-alpha/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFFE3"
+            },
+            {
+              "name": "color/white-alpha/950",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFFF2"
+            },
+            {
+              "name": "color/white-alpha/1000",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
+              "name": "color/red/50",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFF1F1"
+            },
+            {
+              "name": "color/red/100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFE4E4"
+            },
+            {
+              "name": "color/red/200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FDCED1"
+            },
+            {
+              "name": "color/red/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FCA5AA"
+            },
+            {
+              "name": "color/red/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F9737D"
+            },
+            {
+              "name": "color/red/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F24254"
+            },
+            {
+              "name": "color/red/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#DC203C"
+            },
+            {
+              "name": "color/red/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#BB1631"
+            },
+            {
+              "name": "color/red/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#9D1430"
+            },
+            {
+              "name": "color/red/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#4B0614"
+            },
+            {
+              "name": "color/red/950",
+              "type": "color",
+              "isAlias": false,
+              "value": "#2D040C"
+            },
+            {
+              "name": "color/slate/50",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F6F8F9"
+            },
+            {
+              "name": "color/slate/100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#ECEEF2"
+            },
+            {
+              "name": "color/slate/200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#D5DBE2"
+            },
+            {
+              "name": "color/slate/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#B0BDC9"
+            },
+            {
+              "name": "color/slate/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#8599AA"
+            },
+            {
+              "name": "color/slate/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#677C90"
+            },
+            {
+              "name": "color/slate/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#526477"
+            },
+            {
+              "name": "color/slate/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#4A5A6B"
+            },
+            {
+              "name": "color/slate/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#3A4652"
+            },
+            {
+              "name": "color/slate/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#343C46"
+            },
+            {
+              "name": "color/slate/950",
+              "type": "color",
+              "isAlias": false,
+              "value": "#22282F"
+            },
+            {
+              "name": "Spacing/Spaces/space-00",
+              "type": "number",
+              "isAlias": false,
+              "value": 0
+            },
+            {
+              "name": "Spacing/Spaces/space-02",
+              "type": "number",
+              "isAlias": false,
+              "value": 2
+            },
+            {
+              "name": "Spacing/Spaces/space-04",
+              "type": "number",
+              "isAlias": false,
+              "value": 4
+            },
+            {
+              "name": "Spacing/Spaces/space-08",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "Spacing/Spaces/space-12",
+              "type": "number",
+              "isAlias": false,
+              "value": 12
+            },
+            {
+              "name": "Spacing/Spaces/space-16",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Spacing/Spaces/space-24",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Spacing/Spaces/space-32",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Spacing/Spaces/space-48",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Spacing/Radius/radius-sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 10
+            },
+            {
+              "name": "Spacing/Radius/radius-md",
+              "type": "number",
+              "isAlias": false,
+              "value": 14
+            },
+            {
+              "name": "color/sand/50",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F9F8F6"
+            },
+            {
+              "name": "color/sand/100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F2F0EC"
+            },
+            {
+              "name": "color/sand/200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E2DDD5"
+            },
+            {
+              "name": "color/sand/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#C8C0B1"
+            },
+            {
+              "name": "color/sand/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#A89C87"
+            },
+            {
+              "name": "color/sand/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#8E8169"
+            },
+            {
+              "name": "color/sand/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#736956"
+            },
+            {
+              "name": "color/sand/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#665E4F"
+            },
+            {
+              "name": "color/sand/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#4D483F"
+            },
+            {
+              "name": "color/sand/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#423F38"
+            },
+            {
+              "name": "color/sand/950",
+              "type": "color",
+              "isAlias": false,
+              "value": "#2C2925"
+            },
+            {
+              "name": "color/lichen/50",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F5F6F1"
+            },
+            {
+              "name": "color/lichen/100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#EBEEE4"
+            },
+            {
+              "name": "color/lichen/200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#D1D8C2"
+            },
+            {
+              "name": "color/lichen/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#ABBB9A"
+            },
+            {
+              "name": "color/lichen/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#88A37D"
+            },
+            {
+              "name": "color/lichen/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#688362"
+            },
+            {
+              "name": "color/lichen/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#597058"
+            },
+            {
+              "name": "color/lichen/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#435243"
+            },
+            {
+              "name": "color/lichen/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#394438"
+            },
+            {
+              "name": "color/lichen/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#2F3830"
+            },
+            {
+              "name": "color/lichen/950",
+              "type": "color",
+              "isAlias": false,
+              "value": "#171B18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mode",
+      "modes": [
+        {
+          "name": "Light",
+          "variables": [
+            {
+              "name": "fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-surface/default"
+              }
+            },
+            {
+              "name": "fg/on-surface/high-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-surface/hight-contrast"
+              }
+            },
+            {
+              "name": "bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/accent"
+              }
+            },
+            {
+              "name": "bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/surface"
+              }
+            },
+            {
+              "name": "bg/subtle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/card"
+              }
+            },
+            {
+              "name": "bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/cover"
+              }
+            },
+            {
+              "name": "bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/cover-from"
+              }
+            },
+            {
+              "name": "bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/cover-to"
+              }
+            },
+            {
+              "name": "bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/inverse"
+              }
+            },
+            {
+              "name": "bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/topbar"
+              }
+            },
+            {
+              "name": "bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/box-from"
+              }
+            },
+            {
+              "name": "bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/box-to"
+              }
+            },
+            {
+              "name": "fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-surface/low-contrast"
+              }
+            },
+            {
+              "name": "fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-surface/disabled"
+              }
+            },
+            {
+              "name": "fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-surface/accent"
+              }
+            },
+            {
+              "name": "fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/default"
+              }
+            },
+            {
+              "name": "fg/on-cover/high-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/hight-contrast"
+              }
+            },
+            {
+              "name": "fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/low-contrast"
+              }
+            },
+            {
+              "name": "fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/600"
+              }
+            },
+            {
+              "name": "fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/accent"
+              }
+            },
+            {
+              "name": "border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/border/on-surface"
+              }
+            },
+            {
+              "name": "border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/border/on-cover"
+              }
+            },
+            {
+              "name": "border/inverse-deprecated",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/300"
+              }
+            },
+            {
+              "name": "fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-inverse"
+              }
+            },
+            {
+              "name": "Boolean",
+              "type": "boolean",
+              "isAlias": false,
+              "value": true
+            }
+          ]
+        },
+        {
+          "name": "Dark",
+          "variables": [
+            {
+              "name": "fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-surface/default"
+              }
+            },
+            {
+              "name": "fg/on-surface/high-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-surface/hight-contrast"
+              }
+            },
+            {
+              "name": "bg/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/default-deprecated"
+              }
+            },
+            {
+              "name": "bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/surface"
+              }
+            },
+            {
+              "name": "bg/subtle",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/850"
+              }
+            },
+            {
+              "name": "bg/pastel",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/card"
+              }
+            },
+            {
+              "name": "bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/cover"
+              }
+            },
+            {
+              "name": "bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/cover-from"
+              }
+            },
+            {
+              "name": "bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/cover-to"
+              }
+            },
+            {
+              "name": "bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/inverse"
+              }
+            },
+            {
+              "name": "bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/topbar"
+              }
+            },
+            {
+              "name": "bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/box-from"
+              }
+            },
+            {
+              "name": "bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/box-to"
+              }
+            },
+            {
+              "name": "fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-surface/low-contrast"
+              }
+            },
+            {
+              "name": "fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-surface/disabled"
+              }
+            },
+            {
+              "name": "fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-surface/accent"
+              }
+            },
+            {
+              "name": "fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-cover/default"
+              }
+            },
+            {
+              "name": "fg/on-cover/high-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-cover/hight-contrast"
+              }
+            },
+            {
+              "name": "fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-cover/low-contrast"
+              }
+            },
+            {
+              "name": "fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-cover/disabled"
+              }
+            },
+            {
+              "name": "fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-cover/accent"
+              }
+            },
+            {
+              "name": "border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/border/on-surface"
+              }
+            },
+            {
+              "name": "border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/border/on-cover"
+              }
+            },
+            {
+              "name": "border/inverse-deprecated",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/100"
+              }
+            },
+            {
+              "name": "fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-inverse"
+              }
+            },
+            {
+              "name": "Boolean",
+              "type": "boolean",
+              "isAlias": false,
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Style",
+      "modes": [
+        {
+          "name": "Default",
+          "variables": [
+            {
+              "name": "light/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "light/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "light/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "light/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/surface"
+              }
+            },
+            {
+              "name": "light/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/surface"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/fg/accent"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/fg/accent"
+              }
+            },
+            {
+              "name": "light/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Mode",
+                "name": "border/on-surface"
+              }
+            },
+            {
+              "name": "dark/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/950"
+              }
+            },
+            {
+              "name": "dark/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/950"
+              }
+            },
+            {
+              "name": "light/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "dark/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "dark/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/surface"
+              }
+            },
+            {
+              "name": "dark/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "dark/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/surface"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/fg/accent"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/200"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/300"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/fg/accent"
+              }
+            },
+            {
+              "name": "dark/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "dark/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Solid-Inverse",
+          "variables": [
+            {
+              "name": "light/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "light/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Mode",
+                "name": "bg/accent"
+              }
+            },
+            {
+              "name": "light/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/surface"
+              }
+            },
+            {
+              "name": "light/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/cover"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/fg/accent"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/900"
+              }
+            },
+            {
+              "name": "light/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/950"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/800"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/600"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/low-contrast"
+              }
+            },
+            {
+              "name": "light/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/200"
+              }
+            },
+            {
+              "name": "dark/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/950"
+              }
+            },
+            {
+              "name": "dark/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Mode",
+                "name": "bg/accent"
+              }
+            },
+            {
+              "name": "light/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "dark/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "dark/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/surface"
+              }
+            },
+            {
+              "name": "dark/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "dark/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/cover"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/300"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/fg/accent"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/default"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/hight-contrast"
+              }
+            },
+            {
+              "name": "dark/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/900"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/low-contrast"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/disabled"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Mode",
+                "name": "fg/on-cover/low-contrast"
+              }
+            },
+            {
+              "name": "dark/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/200"
+              }
+            },
+            {
+              "name": "dark/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Solid",
+          "variables": [
+            {
+              "name": "light/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "light/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Mode",
+                "name": "bg/accent"
+              }
+            },
+            {
+              "name": "light/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/surface"
+              }
+            },
+            {
+              "name": "light/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/cover"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/fg/accent"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/800"
+              }
+            },
+            {
+              "name": "light/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/900"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/800"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/600"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/700"
+              }
+            },
+            {
+              "name": "light/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/100"
+              }
+            },
+            {
+              "name": "dark/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/950"
+              }
+            },
+            {
+              "name": "dark/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Mode",
+                "name": "bg/accent"
+              }
+            },
+            {
+              "name": "light/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "dark/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "dark/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/surface"
+              }
+            },
+            {
+              "name": "dark/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "dark/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/cover"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/300"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/fg/accent"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/default"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/hight-contrast"
+              }
+            },
+            {
+              "name": "dark/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/low-contrast"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/fg/on-cover/disabled"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/fg/on-cover/low-contrast"
+              }
+            },
+            {
+              "name": "dark/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/100"
+              }
+            },
+            {
+              "name": "dark/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Gradient",
+          "variables": [
+            {
+              "name": "light/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/gradient-from"
+              }
+            },
+            {
+              "name": "light/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/gradient-to"
+              }
+            },
+            {
+              "name": "light/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "light/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/surface"
+              }
+            },
+            {
+              "name": "light/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/cover-from"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/fg/accent"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/800"
+              }
+            },
+            {
+              "name": "light/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/900"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/800"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/600"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/fg/accent"
+              }
+            },
+            {
+              "name": "light/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/100"
+              }
+            },
+            {
+              "name": "dark/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "dark/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "light/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/100"
+              }
+            },
+            {
+              "name": "dark/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/gradient-from"
+              }
+            },
+            {
+              "name": "dark/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/gradient-to"
+              }
+            },
+            {
+              "name": "dark/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/gradient-from"
+              }
+            },
+            {
+              "name": "dark/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/surface"
+              }
+            },
+            {
+              "name": "dark/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "dark/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/cover-from"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/900"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/950"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/800"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/700"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/fg/accent"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/900"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/950"
+              }
+            },
+            {
+              "name": "dark/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/800"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/700"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/fg/accent"
+              }
+            },
+            {
+              "name": "dark/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/200"
+              }
+            },
+            {
+              "name": "dark/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/200"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Tint",
+          "variables": [
+            {
+              "name": "light/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/bg/pastel"
+              }
+            },
+            {
+              "name": "light/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "light/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "light/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "light/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/surface"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/fg/accent"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/surface"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/fg/accent"
+              }
+            },
+            {
+              "name": "light/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/100"
+              }
+            },
+            {
+              "name": "dark/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/bg/pastel"
+              }
+            },
+            {
+              "name": "dark/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/100"
+              }
+            },
+            {
+              "name": "dark/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "dark/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/50"
+              }
+            },
+            {
+              "name": "dark/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/50"
+              }
+            },
+            {
+              "name": "dark/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "dark/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/surface"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/700"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/fg/accent"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "dark/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/surface"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/700"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/fg/accent"
+              }
+            },
+            {
+              "name": "dark/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/100"
+              }
+            },
+            {
+              "name": "dark/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/100"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Settings",
+          "variables": [
+            {
+              "name": "light/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "light/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "light/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/white-alpha/0"
+              }
+            },
+            {
+              "name": "light/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/0"
+              }
+            },
+            {
+              "name": "light/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/50"
+              }
+            },
+            {
+              "name": "light/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/50"
+              }
+            },
+            {
+              "name": "light/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/surface"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "light/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/fg/accent"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/800"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "light/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "light/fg/accent"
+              }
+            },
+            {
+              "name": "light/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Mode",
+                "name": "border/on-surface"
+              }
+            },
+            {
+              "name": "dark/bg/surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "dark/bg/cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "light/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "light/bg/surface"
+              }
+            },
+            {
+              "name": "dark/bg/cover-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/cover-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/850"
+              }
+            },
+            {
+              "name": "dark/bg/box-from",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/box-to",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/black-alpha/0"
+              }
+            },
+            {
+              "name": "dark/bg/inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/bg/topbar",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/surface"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/400"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/600"
+              }
+            },
+            {
+              "name": "dark/fg/on-surface/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/fg/accent"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/100"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/hight-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/50"
+              }
+            },
+            {
+              "name": "dark/fg/on-inverse",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/900"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/low-contrast",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/200"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/disabled",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "color/neutral/300"
+              }
+            },
+            {
+              "name": "dark/fg/on-cover/accent",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Accent",
+                "name": "dark/fg/accent"
+              }
+            },
+            {
+              "name": "dark/border/on-cover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/border/on-surface"
+              }
+            },
+            {
+              "name": "dark/border/on-surface",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Style",
+                "name": "dark/bg/surface"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Box",
+      "modes": [
+        {
+          "name": "false",
+          "variables": [
+            {
+              "name": "padding",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "Spacing/Spaces/space-00"
+              }
+            },
+            {
+              "name": "border",
+              "type": "number",
+              "isAlias": false,
+              "value": 0
+            },
+            {
+              "name": "gap",
+              "type": "number",
+              "isAlias": false,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "true",
+          "variables": [
+            {
+              "name": "padding",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Primitives",
+                "name": "Spacing/Spaces/space-12"
+              }
+            },
+            {
+              "name": "border",
+              "type": "number",
+              "isAlias": false,
+              "value": 1
+            },
+            {
+              "name": "gap",
+              "type": "number",
+              "isAlias": false,
+              "value": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Typography",
+      "modes": [
+        {
+          "name": "Style",
+          "variables": [
+            {
+              "name": "Display 2XL",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 79,
+                "fontFamily": "Sanomat",
+                "fontWeight": "Medium",
+                "lineHeight": 112.00000047683716,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Display XL",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 29,
+                "fontFamily": "Sanomat",
+                "fontWeight": "Medium",
+                "lineHeight": 110.00000238418579,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Display LG",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 20,
+                "fontFamily": "Sanomat Text Trial",
+                "fontWeight": "Semibold",
+                "lineHeight": 120.00000476837158,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": -2,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Serif MD",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 17,
+                "fontFamily": "Publico Text",
+                "fontWeight": "Roman",
+                "lineHeight": 139.9999976158142,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Serif MD Italic",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 17,
+                "fontFamily": "Publico Text",
+                "fontWeight": "Italic",
+                "lineHeight": 139.9999976158142,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Serif MD Emphasis",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 17,
+                "fontFamily": "Publico Text",
+                "fontWeight": "Semibold",
+                "lineHeight": 139.9999976158142,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Serif MD Emphasis Tight",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 17,
+                "fontFamily": "Publico Text",
+                "fontWeight": "Semibold",
+                "lineHeight": 120.00000476837158,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Serif SM",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 15.5,
+                "fontFamily": "Publico Text",
+                "fontWeight": "Roman",
+                "lineHeight": 139.9999976158142,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Serif SM Emphasis",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 15.5,
+                "fontFamily": "Publico Text",
+                "fontWeight": "Semibold",
+                "lineHeight": 139.9999976158142,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Serif SM Italic",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 15.5,
+                "fontFamily": "Publico Text",
+                "fontWeight": "Italic",
+                "lineHeight": 139.9999976158142,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Spec XL Subtle",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 34,
+                "fontFamily": "National",
+                "fontWeight": "Light",
+                "lineHeight": 100,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": -2,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Sans MD",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 18.5,
+                "fontFamily": "National",
+                "fontWeight": "Book",
+                "lineHeight": 129.99999523162842,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Sans MD Emphasis",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 18.5,
+                "fontFamily": "National",
+                "fontWeight": "Semibold",
+                "lineHeight": 129.99999523162842,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Sans SM",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 15.5,
+                "fontFamily": "National",
+                "fontWeight": "Book",
+                "lineHeight": 129.99999523162842,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Sans SM Emphasis",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 15.5,
+                "fontFamily": "National",
+                "fontWeight": "Semibold",
+                "lineHeight": 129.99999523162842,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Sans SM  Emphasis Tight",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 15.5,
+                "fontFamily": "National",
+                "fontWeight": "Semibold",
+                "lineHeight": 110.00000238418579,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Sans XS",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "National",
+                "fontWeight": "Book",
+                "lineHeight": 120.00000476837158,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Sans XS Emphasis",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "National",
+                "fontWeight": "Semibold",
+                "lineHeight": 120.00000476837158,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Sans 2XL",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 102,
+                "fontFamily": "National",
+                "fontWeight": "Light",
+                "lineHeight": 100,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": -2,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Serif MD smallcaps",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 17,
+                "fontFamily": "Publico Text",
+                "fontWeight": "Semibold",
+                "lineHeight": 139.9999976158142,
+                "lineHeightUnit": "PERCENT",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "SMALL_CAPS_FORCED",
+                "textDecoration": "NONE"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Grids",
+      "modes": [
+        {
+          "name": "Style",
+          "variables": [
+            {
+              "name": "393",
+              "type": "grid",
+              "isAlias": false,
+              "value": {
+                "layoutGrids": [
+                  {
+                    "pattern": "COLUMNS",
+                    "color": {
+                      "r": 255,
+                      "g": 0,
+                      "b": 0,
+                      "a": 0.1
+                    },
+                    "alignment": "STRETCH",
+                    "gutterSize": 12,
+                    "offset": 12,
+                    "count": 4
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
