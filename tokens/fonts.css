@@ -1,0 +1,87 @@
+/* ============================================================
+   @font-face declarations.
+   Web licensed for LGC. Self-hosted, woff2 preferred.
+   ============================================================ */
+
+/* ── Sanomat (Web) ─────────────────────────────────────────
+   Display serif. We only have Semibold (600) currently.
+   System asks for Medium (500); Semibold stands in until
+   the Medium file arrives.
+   font-weight range covers both so demanding either resolves. */
+@font-face {
+  font-family: "Sanomat";
+  src: url("../fonts/Sanomat-Semibold-Web.woff2") format("woff2");
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sanomat";
+  src: url("../fonts/Sanomat-RegularItalic-Web.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ── Publico Text (Web) ────────────────────────────────────
+   Body serif. */
+@font-face {
+  font-family: "Publico Text";
+  src: url("../fonts/PublicoText-Roman-Web.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Publico Text";
+  src: url("../fonts/PublicoText-Italic-Web.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Publico Text";
+  src: url("../fonts/PublicoText-Semibold-Web.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Publico Text";
+  src: url("../fonts/PublicoText-SemiboldItalic-Web.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ── National (Web) ────────────────────────────────────────
+   Alt sans. Light for displays, Book for body, Semibold for emphasis.
+   TODO: National-Book.woff2 and National-Semibold.woff2 not yet provided. */
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-BookItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

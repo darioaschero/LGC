@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="..">
+  <title>GC — Typography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tokens/fonts.css">
+  <link rel="stylesheet" href="tokens/primitives.css">
+  <link rel="stylesheet" href="tokens/semantic.css">
+  <link rel="stylesheet" href="tokens/rich-text.css">
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="wordmark">GC</span>
+      <span class="breadcrumb">Design System · v0.1</span>
+    </div>
+    <div class="toggles">
+      <button class="toggle" id="mode-toggle" type="button" aria-label="Toggle color mode">Mode: light</button>
+    </div>
+  </header>
+
+  <div id="sidebar-mount"></div>
+
+  <main>
+    <section>
+      <div class="section-label">Foundations</div>
+      <h2>Typography</h2>
+      <p class="section-desc">
+        Four type roles. Each toggles between <em>default</em> (Publico Text body / Sanomat display) and <em>alt</em> (National for both) via <code>data-typeset="alt"</code> on any ancestor. Font-size scales by 1.16 and line-height by its inverse, so the computed line in pixels stays invariant across typesets and vertical rhythm holds when switching.
+      </p>
+
+      <div class="type" id="type-table">
+        <div class="sem-h">Role</div>
+        <div class="sem-h">Spec (current typeset)</div>
+        <div class="sem-h">Sample</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="docs.js"></script>
+  <script>
+    // Render type role table. Reads computed values per row so
+    // the Spec column tracks the live typeset (default ↔ alt).
+    (() => {
+      const roles = [
+        { name: 'text-display-sm', cls: 'text-display-sm', sample: 'On lampposts and lectures' },
+        { name: 'text-display-xs', cls: 'text-display-xs', sample: 'On lampposts and lectures' },
+        { name: 'text-body',       cls: 'text-body',       sample: 'The river was the colour of pewter that morning, and the wind carried the smell of woodsmoke from the kilns.' },
+        { name: 'text-body-sm',    cls: 'text-body-sm',    sample: 'The river was the colour of pewter that morning, and the wind carried the smell of woodsmoke from the kilns.' },
+      ];
+      const table = document.getElementById('type-table');
+      roles.forEach(r => {
+        const row = document.createElement('div');
+        row.className = 'type-row';
+        row.innerHTML = `
+          <div class="type-role">${r.name}</div>
+          <div class="type-spec" data-spec-for="${r.cls}"></div>
+          <div class="type-sample ${r.cls}">${r.sample}</div>
+        `;
+        table.appendChild(row);
+      });
+      requestAnimationFrame(refreshSpecs);
+      // Expose so docs.js typeset toggle can re-read computed values.
+      window.refreshSpecs = refreshSpecs;
+      function refreshSpecs() {
+        document.querySelectorAll('[data-spec-for]').forEach(el => {
+          const target = el.parentElement.querySelector('.type-sample');
+          const cs = getComputedStyle(target);
+          const family   = cs.fontFamily.split(',')[0].replace(/"/g, '').trim();
+          const size     = parseFloat(cs.fontSize).toFixed(2).replace(/\.00$/, '');
+          const lh       = parseFloat(cs.lineHeight) / parseFloat(cs.fontSize);
+          const weight   = cs.fontWeight;
+          const tracking = cs.letterSpacing === 'normal' ? '0' : cs.letterSpacing;
+          el.innerHTML = `${family}<br>${size}px&nbsp;/&nbsp;${lh.toFixed(2)}<br>w${weight}&nbsp;·&nbsp;${tracking}`;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

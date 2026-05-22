@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="..">
+  <title>GC — Spacing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tokens/fonts.css">
+  <link rel="stylesheet" href="tokens/primitives.css">
+  <link rel="stylesheet" href="tokens/semantic.css">
+  <link rel="stylesheet" href="tokens/rich-text.css">
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="wordmark">GC</span>
+      <span class="breadcrumb">Design System · v0.1</span>
+    </div>
+    <div class="toggles">
+      <button class="toggle" id="mode-toggle" type="button" aria-label="Toggle color mode">Mode: light</button>
+    </div>
+  </header>
+
+  <div id="sidebar-mount"></div>
+
+  <main>
+    <section>
+      <div class="section-label">Foundations</div>
+      <h2>Spacing</h2>
+      <p class="section-desc">
+        Primitive scale matching the Figma source values. Defined in <code>rem</code> so spacing scales with the user's root font-size preference. Numbers in the token name are the px value at the default root (1rem = 16px).
+      </p>
+
+      <div class="space" id="space-table">
+        <div class="sem-h">Token</div>
+        <div class="sem-h">Value</div>
+        <div class="sem-h">Scale</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="docs.js"></script>
+  <script>
+    // Render spacing table from the actual CSS variables.
+    (() => {
+      const tokens = ['00','02','04','08','12','16','24','32','48'];
+      const table  = document.getElementById('space-table');
+      const cs     = getComputedStyle(document.documentElement);
+      tokens.forEach(t => {
+        const varName = `--space-${t}`;
+        const value   = cs.getPropertyValue(varName).trim();
+        const row     = document.createElement('div');
+        row.className = 'space-row';
+        row.innerHTML = `
+          <div class="space-name">${varName}</div>
+          <div class="space-val">${value || '0'}</div>
+          <div><div class="space-bar" style="width: var(${varName});"></div></div>
+        `;
+        table.appendChild(row);
+      });
+    })();
+  </script>
+</body>
+</html>

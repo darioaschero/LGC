@@ -4,191 +4,11 @@
   <meta charset="utf-8">
   <title>GC — Design System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tokens/fonts.css">
   <link rel="stylesheet" href="tokens/primitives.css">
   <link rel="stylesheet" href="tokens/semantic.css">
-  <style>
-    /* Docs-page styling. Uses only semantic tokens — never primitives directly. */
-
-    *, *::before, *::after { box-sizing: border-box; }
-
-    html, body { margin: 0; padding: 0; }
-
-    body {
-      background: var(--bg);
-      color: var(--fg);
-      font-family: ui-serif, "Iowan Old Style", "Charter", Georgia, serif;
-      font-size: 16px;
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .mono {
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 12px;
-      letter-spacing: 0.02em;
-    }
-
-    /* ── Header ─────────────────────────────────────────── */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 28px 48px;
-      border-bottom: 1px solid var(--border);
-    }
-    .brand {
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-    }
-    .wordmark {
-      font-size: 20px;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-    }
-    .breadcrumb {
-      color: var(--fg-muted);
-      text-transform: uppercase;
-      font-size: 11px;
-      letter-spacing: 0.08em;
-    }
-    .mode-toggle {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--fg);
-      padding: 8px 16px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .mode-toggle:hover { background: var(--bg-subtle); }
-
-    /* ── Layout ─────────────────────────────────────────── */
-    main {
-      max-width: 1120px;
-      padding: 80px 48px 160px;
-    }
-    section + section { margin-top: 112px; }
-
-    .section-label {
-      color: var(--fg-muted);
-      text-transform: uppercase;
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      margin-bottom: 16px;
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-    }
-    h2 {
-      font-size: 40px;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      margin: 0 0 12px;
-      line-height: 1.1;
-    }
-    .section-desc {
-      max-width: 62ch;
-      color: var(--fg-muted);
-      margin: 0 0 48px;
-      font-size: 17px;
-      line-height: 1.55;
-    }
-    code {
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 0.9em;
-      background: var(--bg-subtle);
-      padding: 1px 6px;
-      border-radius: 4px;
-    }
-
-    /* ── Neutral ramp ───────────────────────────────────── */
-    .ramp {
-      display: grid;
-      /* minmax(0, 1fr) lets columns shrink below their content's intrinsic size,
-         otherwise the mono hex labels force a min width and the last swatches clip. */
-      grid-template-columns: repeat(13, minmax(0, 1fr));
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .swatch {
-      aspect-ratio: 1 / 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 10px 12px;
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 10px;
-      line-height: 1.3;
-    }
-    .swatch .step { font-weight: 600; }
-    .swatch .val {
-      opacity: 0.6;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    /* Hide hex labels on tighter viewports — step number alone is enough. */
-    @media (max-width: 960px) {
-      .swatch .val { display: none; }
-    }
-    /* Text color: dark on light swatches (≤400), light on dark (≥500) */
-    .swatch[data-on="dark"] { color: var(--color-neutral-900); }
-    .swatch[data-on="light"] { color: var(--color-neutral-50); }
-
-    /* ── Semantic table ─────────────────────────────────── */
-    .sem {
-      display: grid;
-      grid-template-columns: minmax(160px, 1.2fr) minmax(220px, 1.5fr) 2fr;
-      column-gap: 32px;
-      border-top: 1px solid var(--border);
-    }
-    .sem-h {
-      padding: 16px 0 12px;
-      border-bottom: 1px solid var(--border);
-      color: var(--fg-muted);
-      text-transform: uppercase;
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-    }
-    .sem-row {
-      display: contents;
-    }
-    .sem-row > * {
-      padding: 24px 0;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-    }
-    .sem-name {
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 14px;
-    }
-    .sem-resolve {
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      font-size: 12px;
-      color: var(--fg-muted);
-      line-height: 1.5;
-    }
-    .preview {
-      height: 56px;
-      width: 100%;
-      border-radius: 6px;
-    }
-    .preview.line {
-      height: 1px;
-      align-self: center;
-    }
-    .preview.text {
-      height: auto;
-      font-family: ui-serif, Georgia, serif;
-      font-size: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="tokens/rich-text.css">
+  <link rel="stylesheet" href="docs.css">
 </head>
 <body>
   <header>
@@ -196,107 +16,38 @@
       <span class="wordmark">GC</span>
       <span class="breadcrumb">Design System · v0.1</span>
     </div>
-    <button class="mode-toggle" type="button" aria-label="Toggle color mode">Toggle mode</button>
+    <div class="toggles">
+      <button class="toggle" id="mode-toggle" type="button" aria-label="Toggle color mode">Mode: light</button>
+    </div>
   </header>
 
+  <div id="sidebar-mount"></div>
+
   <main>
-    <!-- ────────── Primitives ────────── -->
     <section>
-      <div class="section-label">01 — Primitives</div>
-      <h2>Neutral</h2>
+      <div class="section-label">Overview</div>
+      <h2>A multi-axis design system for a WordPress classic theme.</h2>
       <p class="section-desc">
-        The foundational gray scale. The only raw color values in the system — every semantic token resolves to one of these. Perceptually scaled in OKLCH so steps feel evenly spaced to the eye, not just to the math.
-      </p>
-      <div class="ramp" id="ramp"></div>
-    </section>
-
-    <!-- ────────── Semantic ────────── -->
-    <section>
-      <div class="section-label">02 — Semantic</div>
-      <h2>Surface &amp; Foreground</h2>
-      <p class="section-desc">
-        Five tokens. Components reference these and only these. Mode resolution is automatic via <code>light-dark()</code> — the same token returns the correct value in light or dark without any duplicated CSS.
+        Tokens cascade <em>primitives → accent → style → mode → component</em>. Each layer adds one decision; no combinatorial explosion. Three axes drive every visual: <em>mode</em> (light/dark, decided by the end user), <em>accent</em> (per-post colour, decided by the editor), <em>style</em> (per-template, decided by the developer).
       </p>
 
-      <div class="sem">
-        <div class="sem-h">Token</div>
-        <div class="sem-h">Resolves to (light / dark)</div>
-        <div class="sem-h">Preview</div>
+      <h3>Status</h3>
+      <ul class="roadmap">
+        <li><span class="roadmap-stage roadmap-done">M1</span> Foundations &mdash; neutral primitives, semantic surfaces, spacing, light/dark</li>
+        <li><span class="roadmap-stage roadmap-done">M4</span> Typography &mdash; type roles + rich-text with drop letter and per-element axes</li>
+        <li><span class="roadmap-stage">M2</span> Accent axis &mdash; three accents</li>
+        <li><span class="roadmap-stage">M3</span> Style axis &mdash; default / solid / tint / gradient</li>
+        <li><span class="roadmap-stage">M5</span> Component library</li>
+        <li><span class="roadmap-stage">M6</span> Example WP templates</li>
+        <li><span class="roadmap-stage">M7</span> Port to PHP / classic theme structure</li>
+      </ul>
 
-        <div class="sem-row">
-          <div class="sem-name">--bg</div>
-          <div class="sem-resolve">neutral-0&nbsp;&nbsp;/&nbsp;&nbsp;neutral-1000</div>
-          <div><div class="preview" style="background:var(--bg); border:1px solid var(--border);"></div></div>
-        </div>
-
-        <div class="sem-row">
-          <div class="sem-name">--bg-subtle</div>
-          <div class="sem-resolve">neutral-100&nbsp;&nbsp;/&nbsp;&nbsp;neutral-900</div>
-          <div><div class="preview" style="background:var(--bg-subtle);"></div></div>
-        </div>
-
-        <div class="sem-row">
-          <div class="sem-name">--fg</div>
-          <div class="sem-resolve">neutral-900&nbsp;&nbsp;/&nbsp;&nbsp;neutral-100</div>
-          <div><div class="preview text" style="color:var(--fg);">The quick brown fox jumps over the lazy dog</div></div>
-        </div>
-
-        <div class="sem-row">
-          <div class="sem-name">--fg-muted</div>
-          <div class="sem-resolve">neutral-600&nbsp;&nbsp;/&nbsp;&nbsp;neutral-400</div>
-          <div><div class="preview text" style="color:var(--fg-muted);">The quick brown fox jumps over the lazy dog</div></div>
-        </div>
-
-        <div class="sem-row">
-          <div class="sem-name">--border</div>
-          <div class="sem-resolve">neutral-200&nbsp;&nbsp;/&nbsp;&nbsp;neutral-800</div>
-          <div><div class="preview line" style="background:var(--border);"></div></div>
-        </div>
-      </div>
+      <p style="margin-top: var(--space-48);">
+        <a href="foundations/colour.html" class="cta">Start here &nbsp;→</a>
+      </p>
     </section>
   </main>
 
-  <script>
-    // ── Render neutral ramp from the actual CSS variables ──
-    (() => {
-      const steps = [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 1000];
-      const ramp = document.getElementById('ramp');
-      const cs = getComputedStyle(document.documentElement);
-      ramp.innerHTML = steps.map(s => {
-        const varName = `--color-neutral-${s}`;
-        const val = cs.getPropertyValue(varName).trim();
-        const onColor = s <= 400 ? 'dark' : 'light';
-        return `
-          <div class="swatch" data-on="${onColor}" style="background: var(${varName});">
-            <span class="step">${s}</span>
-            <span class="val">${val}</span>
-          </div>`;
-      }).join('');
-    })();
-
-    // ── Mode toggle ──
-    (() => {
-      const root = document.documentElement;
-      const btn = document.querySelector('.mode-toggle');
-      const stored = localStorage.getItem('gc-mode');
-      if (stored === 'light' || stored === 'dark') {
-        root.setAttribute('data-mode', stored);
-      }
-      function currentMode() {
-        return root.getAttribute('data-mode')
-          || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      }
-      function refresh() {
-        btn.textContent = currentMode() === 'dark' ? 'Switch to light' : 'Switch to dark';
-      }
-      btn.addEventListener('click', () => {
-        const next = currentMode() === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-mode', next);
-        localStorage.setItem('gc-mode', next);
-        refresh();
-      });
-      refresh();
-    })();
-  </script>
+  <script src="docs.js"></script>
 </body>
 </html>

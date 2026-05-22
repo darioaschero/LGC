@@ -1,0 +1,444 @@
+/* ============================================================
+   DOCS — styles for the design-system documentation page.
+   Not part of the design system itself: this file styles the
+   chrome (header, layout, swatches, tables) of index.html.
+
+   Rule: consumes only semantic tokens (--bg, --fg, --space-*,
+   --border, etc.) — never primitives directly. The styleguide
+   is the first "component" that uses the system, so it stays
+   in step with any token change automatically.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+:root {
+  --header-h:  76px;
+  --sidebar-w: 264px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mono {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-h);
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.wordmark {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.breadcrumb {
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.toggles {
+  display: flex;
+  gap: 8px;
+}
+.toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--fg);
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.toggle:hover { background: var(--bg-subtle); }
+
+/* ── Sidebar (fixed left, below header) ─────────────── */
+.sidebar {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-w);
+  overflow-y: auto;
+  z-index: 10;
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  padding: 24px 16px;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.nav-group {
+  margin: 0;
+}
+/* Native disclosure: suppress default marker, render our own. */
+.nav-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+  border-radius: 4px;
+  user-select: none;
+}
+.nav-summary::-webkit-details-marker { display: none; }
+.nav-summary::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid currentColor;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: transform 0.15s ease;
+}
+details[open] > .nav-summary::before {
+  transform: rotate(90deg);
+}
+.nav-summary:hover {
+  background: var(--bg-subtle);
+  color: var(--fg);
+}
+.nav-list {
+  list-style: none;
+  margin: 4px 0 12px;
+  padding: 0 0 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.nav-link {
+  display: block;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: var(--fg);
+  text-decoration: none;
+  border-radius: 4px;
+}
+.nav-link:hover {
+  background: var(--bg-subtle);
+}
+.nav-link.is-active {
+  background: var(--bg-subtle);
+  color: var(--fg-high-contrast);
+  font-weight: 500;
+}
+.nav-disabled {
+  padding: 6px 10px;
+  font-size: 13px;
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+/* ── Layout ─────────────────────────────────────────── */
+main {
+  margin-left: var(--sidebar-w);
+  padding: calc(var(--header-h) + 64px) 64px 160px;
+  max-width: calc(var(--sidebar-w) + 1120px);
+}
+section + section { margin-top: 112px; }
+
+.section-label {
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+h2 {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: var(--weight-medium);
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+
+/* Subsection labels in the docs. Same shape as the rich-text
+   data-h2="alt" treatment: swapped face (sans on the serif
+   docs body), semibold, small-caps, tight tracking. Reads as
+   an editorial divider rather than a display heading. */
+h3 {
+  font-family:       var(--typeset-family-swapped);
+  font-size:         calc(1.0625rem * var(--typeset-size-scale-swapped));
+  line-height:       calc(1.4       * var(--typeset-leading-scale-swapped));
+  font-weight:       var(--weight-semibold);
+  letter-spacing:    0.02em;
+  font-variant-caps: all-small-caps;
+  color:             var(--fg-high-contrast);
+  margin: 48px 0 12px;
+}
+.section-desc {
+  max-width: 62ch;
+  color: var(--fg);
+  margin: 0 0 48px;
+}
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--bg-subtle);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+/* ── Neutral ramp ───────────────────────────────────── */
+.ramp {
+  display: grid;
+  /* minmax(0, 1fr) lets columns shrink below their content's intrinsic size,
+     otherwise the mono hex labels force a min width and the last swatches clip. */
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.swatch {
+  aspect-ratio: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px 12px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 10px;
+  line-height: 1.3;
+}
+.swatch .step { font-weight: 600; }
+.swatch .val {
+  opacity: 0.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Hide hex labels on tighter viewports — step number alone is enough. */
+@media (max-width: 960px) {
+  .swatch .val { display: none; }
+}
+/* Text color: dark on light swatches (≤400), light on dark (≥500) */
+.swatch[data-on="dark"] { color: var(--color-neutral-900); }
+.swatch[data-on="light"] { color: var(--color-neutral-50); }
+
+/* ── Semantic table ─────────────────────────────────── */
+.sem {
+  display: grid;
+  grid-template-columns: minmax(160px, 1.2fr) minmax(220px, 1.5fr) 2fr;
+  column-gap: 32px;
+  border-top: 1px solid var(--border);
+}
+.sem-h {
+  padding: 16px 0 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+.sem-row {
+  display: contents;
+}
+.sem-row > * {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+.sem-name {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 14px;
+}
+.sem-resolve {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  color: var(--fg-muted);
+  line-height: 1.5;
+}
+.preview {
+  height: 56px;
+  width: 100%;
+  border-radius: 6px;
+}
+.preview.line {
+  height: 1px;
+  align-self: center;
+}
+.preview.text {
+  height: auto;
+  font-family: var(--font-serif);
+  font-size: 20px;
+}
+
+/* ── Type sample table ──────────────────────────────── */
+.type {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.9fr) minmax(180px, 1fr) 2.4fr;
+  column-gap: 32px;
+  border-top: 1px solid var(--border);
+}
+.type-row { display: contents; }
+.type-row > * {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  align-self: center;
+}
+.type-role {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 14px;
+}
+.type-spec {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  color: var(--fg-muted);
+  line-height: 1.6;
+}
+.type-sample {
+  color: var(--fg);
+  text-wrap: pretty;
+}
+
+/* ── Spacing scale ───────────────────────────── */
+.space {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.9fr) minmax(120px, 0.7fr) 2fr;
+  column-gap: 32px;
+  border-top: 1px solid var(--border);
+}
+.space-row { display: contents; }
+.space-row > * {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  align-self: center;
+}
+.space-name {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 14px;
+}
+.space-val {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+.space-bar {
+  height: 16px;
+  background: var(--fg);
+  border-radius: 2px;
+  min-width: 1px;
+}
+
+/* ── Landing page ───────────────────────────────────── */
+.roadmap {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 62ch;
+}
+.roadmap li {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.roadmap-stage {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--bg-subtle);
+  color: var(--fg-muted);
+  flex-shrink: 0;
+}
+.roadmap-stage.roadmap-done {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--fg);
+  color: var(--bg);
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.cta:hover {
+  background: var(--fg-high-contrast);
+}
+
+/* ── Demo sections (rich-text component page) ───────── */
+.demo {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+.demo > h3 {
+  margin-top: 0;
+}
+.demo-desc {
+  max-width: 62ch;
+  color: var(--fg);
+  margin: 0 0 24px;
+}
+.demo-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.demo-target {
+  max-width: 62ch;
+}
+
+/* Toggle "on" state — used by demo toggles. */
+.toggle.is-active {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+.toggle.is-active:hover {
+  background: var(--fg-high-contrast);
+  border-color: var(--fg-high-contrast);
+}

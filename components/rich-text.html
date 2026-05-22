@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="..">
+  <title>GC — Rich text</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tokens/fonts.css">
+  <link rel="stylesheet" href="tokens/primitives.css">
+  <link rel="stylesheet" href="tokens/semantic.css">
+  <link rel="stylesheet" href="tokens/rich-text.css">
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="wordmark">GC</span>
+      <span class="breadcrumb">Design System · v0.1</span>
+    </div>
+    <div class="toggles">
+      <button class="toggle" id="mode-toggle" type="button" aria-label="Toggle color mode">Mode: light</button>
+    </div>
+  </header>
+
+  <div id="sidebar-mount"></div>
+
+  <main>
+    <section>
+      <div class="section-label">Components</div>
+      <h2>Rich text</h2>
+      <p class="section-desc">
+        The <code>.rich-text</code> wrapper applies design-system typography to plain semantic HTML &mdash; the output of a CMS editor like Gutenberg, but framework-agnostic. Each axis below (typeset, drop letter, headings, list markers) can be flipped independently; the controls on each section apply only to that section's example.
+      </p>
+
+      <!-- ────────── Drop letter ────────── -->
+      <section class="demo">
+        <h3>Drop letter</h3>
+        <p class="demo-desc">
+          Three-line drop cap on paragraphs marked with the Gutenberg-native <code>has-drop-cap</code> class. <em>Drop letter</em> toggles between default (Sanomat semibold) and alt (National Light) face; the size is calibrated to each face so the drop spans exactly three body lines and its baseline sits on line 3.
+        </p>
+        <div class="demo-toggles">
+          <button class="toggle" type="button" data-toggle="typeset">Typeset: default</button>
+          <button class="toggle" type="button" data-toggle="dropletter">Drop letter: default</button>
+        </div>
+        <div class="demo-target rich-text">
+          <p class="has-drop-cap">The river was the colour of pewter on the morning of 14 March 1893, and the wind carried the smell of woodsmoke from the 27 kilns along the eastern bank. We left the cottage at six and walked in silence as far as the second bridge, where the path narrowed and the trees closed overhead. Beyond the bridge the track turned uphill through a stand of beech, then opened onto a clearing of cropped grass and the low stone wall that marked the kiln-master's old plot. The heron was not at the bank that morning, though it had been every day of the previous week.</p>
+          <p>From there the path narrowed and the trees closed overhead until almost no light reached the floor. <strong>Nothing moved on the water</strong>; even the heron at the far bank stood as if cast in lead, watching some invisible point in the middle distance. <em>The whole valley seemed to be holding its breath.</em> We sat on the wall until the rain came at half past nine, and then turned for home along the same track, our boots quieter now that the leaves were wet, the smoke of the kilns thinned to a single grey thread above us.</p>
+        </div>
+      </section>
+
+      <!-- ────────── Headings ────────── -->
+      <section class="demo">
+        <h3>Headings</h3>
+        <p class="demo-desc">
+          H2 and H3 are body-styled (not display) with semibold, wider tracking, and high-contrast colour; H2 adds all-small-caps for a stronger editorial divider. <em>H2</em> and <em>H3</em> each have their own face axis &mdash; alt swaps face relative to body and borrows the opposite typeset's size/leading, so a sans heading on a serif body matches the optical cap-height of a serif heading on a sans body.
+        </p>
+        <div class="demo-toggles">
+          <button class="toggle" type="button" data-toggle="typeset">Typeset: default</button>
+          <button class="toggle" type="button" data-toggle="h2">H2: default</button>
+          <button class="toggle" type="button" data-toggle="h3">H3: default</button>
+        </div>
+        <div class="demo-target rich-text">
+          <h2>Chapter I</h2>
+          <p>On the morning of 14 March 1893 the river ran the colour of pewter, and the wind from the eastern moors carried with it the smell of woodsmoke from the 27 kilns along the bank. We left the cottage at six and walked in silence as far as the second bridge, where the path narrowed and the trees closed overhead. Beyond the bridge the track turned uphill through a stand of beech, then opened onto a clearing of cropped grass and the low stone wall that marked the kiln-master's plot, where the heron had stood every morning of the previous week.</p>
+          <h3>What did you remember most clearly about the morning the river ran the colour of pewter, and how soon afterwards did you understand that what had taken place at the second bridge was something you would carry with you for the rest of your life?</h3>
+          <p>What I remember most is the silence. Not absence of sound, exactly &mdash; the kilns were still firing, and one could hear the distant working of the bellows &mdash; but the absence of any sound from the water itself. The river usually muttered against the bridge piers, especially in March when the snowmelt was up; that morning it slid past in absolute stillness, as if the whole valley were rehearsing some grave private ceremony from which the rest of us had been politely excluded.</p>
+        </div>
+      </section>
+
+      <!-- ────────── Lists ────────── -->
+      <section class="demo">
+        <h3>Lists</h3>
+        <p class="demo-desc">
+          Ordered list markers render in semibold by default, fixed at 17px regardless of body, with lining tabular figures so multi-digit numerals align at the decimal. <em>Numerals</em> alt swaps the marker face relative to body. Unordered lists use the same wrapper and rhythm.
+        </p>
+        <div class="demo-toggles">
+          <button class="toggle" type="button" data-toggle="typeset">Typeset: default</button>
+          <button class="toggle" type="button" data-toggle="dropletter">Drop letter: default</button>
+          <button class="toggle" type="button" data-toggle="ol-marker">Numerals: default</button>
+        </div>
+        <div class="demo-target rich-text">
+          <p class="has-drop-cap">The river was the colour of pewter on the morning of 14 March 1893, and the wind carried the smell of woodsmoke from the 27 kilns along the eastern bank. The morning's instructions, as agreed the night before with the kiln-master, were precise and not negotiable. We were to follow the path along the river until the second bridge, then turn uphill and continue to the clearing where the low stone wall stood; from there we were to wait for the heron to move, and only then proceed across the open ground toward the third kiln.</p>
+          <ol>
+            <li>Cross the bridge at 06:30 sharp, regardless of weather, and continue along the eastern path until you reach the second beech tree, marked with the iron plaque dated 1842.</li>
+            <li>Turn left at the plaque and follow the uphill track for 380 metres, counting paces if necessary, until the trees thin and the low stone wall of the kiln-master's old plot becomes visible.</li>
+            <li>Wait at the wall until the heron at the far bank moves &mdash; usually within 11 minutes &mdash; and then proceed across the clearing without speaking, taking the diagonal line toward the third kiln.</li>
+            <li>Continue to the third kiln, identifiable by the moss on its northern face, and leave the parcel in the wooden box behind it; do not look inside, and do not wait for an answer.</li>
+          </ol>
+          <p>The instructions were observed to the letter that morning, though afterwards we agreed that the eleventh minute had felt much longer than the previous ten, and that the heron, when it finally moved, did so with a deliberateness that seemed almost ceremonial &mdash; lifting one foot, then the other, before unfurling itself in two long beats into the mist above the alders, leaving the water behind it as undisturbed as we had found it.</p>
+          <ul>
+            <li>Pewter river.</li>
+            <li>Woodsmoke wind.</li>
+            <li>A heron, cast in lead.</li>
+            <li>One kiln-master's plot.</li>
+          </ul>
+          <p>By half past nine the rain had come down from the high moor and the clearing had taken on the closed, indrawn look that valleys assume in heavy weather. The kilns themselves were almost invisible now, except for the slight pink flush in the smoke that rose from the third and fifth fires. We turned for home along the same track, our boots quieter on the wet leaves, and did not speak of the heron, or the parcel, or what had been inside it, until many years later.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="docs.js"></script>
+  <script>
+    // Per-section demo toggles. Each <section class="demo"> has a
+    // row of buttons[data-toggle="…"] and one .demo-target. Click
+    // flips the corresponding axis on the target (or on the
+    // <p class="has-drop-cap"> inside it, for the dropletter toggle).
+    (() => {
+      // Map: button key → label prefix (shown in the button text).
+      const LABEL = {
+        typeset:    'Typeset',
+        dropletter: 'Drop letter',
+        h2:         'H2',
+        h3:         'H3',
+        'ol-marker':'Numerals',
+      };
+
+      document.querySelectorAll('section.demo').forEach(demo => {
+        const target = demo.querySelector('.demo-target');
+        if (!target) return;
+
+        demo.querySelectorAll('button[data-toggle]').forEach(btn => {
+          const key = btn.dataset.toggle;
+          const refresh = (isAlt) => {
+            btn.classList.toggle('is-active', isAlt);
+            btn.textContent = `${LABEL[key] || key}: ${isAlt ? 'alt' : 'default'}`;
+          };
+          refresh(false);
+
+          btn.addEventListener('click', () => {
+            const isAlt = !btn.classList.contains('is-active');
+
+            if (key === 'dropletter') {
+              // Dropletter alt is a class on the <p>, not an attribute on the wrapper.
+              target.querySelectorAll('p.has-drop-cap').forEach(p => {
+                p.classList.toggle('is-style-dropcap-alt', isAlt);
+              });
+            } else {
+              // typeset / h2 / h3 / ol-marker → data-* attribute on the wrapper.
+              const attr = `data-${key}`;
+              if (isAlt) target.setAttribute(attr, 'alt');
+              else target.removeAttribute(attr);
+            }
+
+            refresh(isAlt);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

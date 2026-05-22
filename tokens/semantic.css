@@ -13,8 +13,9 @@
   --bg-subtle: light-dark(var(--color-neutral-100), var(--color-neutral-900));
 
   /* ── Foreground ─────────────────────────────────────────── */
-  --fg:        light-dark(var(--color-neutral-900), var(--color-neutral-100));
-  --fg-muted:  light-dark(var(--color-neutral-600), var(--color-neutral-400));
+  --fg:               light-dark(var(--color-neutral-800), var(--color-neutral-100));
+  --fg-high-contrast: light-dark(var(--color-neutral-900), var(--color-neutral-50));
+  --fg-muted:         light-dark(var(--color-neutral-600), var(--color-neutral-400));
 
   /* ── Lines ──────────────────────────────────────────────── */
   --border:    light-dark(var(--color-neutral-200), var(--color-neutral-800));
@@ -23,3 +24,208 @@
 /* User override — flips light-dark() resolution for the whole tree. */
 [data-mode="light"] { color-scheme: light; }
 [data-mode="dark"]  { color-scheme: dark; }
+
+
+/* ============================================================
+   TYPESET — default (serif) ↔ alt (sans).
+   Set via [data-typeset="alt"] on any element. Inherits to subtree.
+
+   Math: 1.16 × (1/1.16) = 1.
+   → font-size scaled up by 1.16, line-height inversely.
+   → COMPUTED line-height in pixels is invariant across typesets,
+     so vertical rhythm holds when toggling default ↔ alt.
+
+   Per-role overrides (--display-weight, --display-tracking)
+   exist for displays only: National Light at hero size needs
+   compensation that uniform scaling can't provide.
+   ============================================================ */
+
+:root {
+  /* Default typeset — serif */
+  --typeset-family:               var(--font-serif);
+  --typeset-family-swapped:       var(--font-sans);    /* opposite face */
+  --typeset-size-scale:           1;
+  --typeset-size-scale-swapped:   1.16;                /* opposite size  */
+  --typeset-leading-scale:        1;
+  --typeset-leading-scale-swapped: 0.862;              /* opposite lead  */
+  --display-family:               var(--font-display);
+  --display-weight:               var(--weight-semibold);
+  --display-tracking:             0;
+}
+
+[data-typeset="alt"] {
+  /* Alt typeset — sans (National) */
+  --typeset-family:               var(--font-sans);
+  --typeset-family-swapped:       var(--font-serif);   /* opposite face */
+  --typeset-size-scale:           1.16;
+  --typeset-size-scale-swapped:   1;                   /* opposite size  */
+  --typeset-leading-scale:        0.862;
+  --typeset-leading-scale-swapped: 1;                  /* opposite lead  */
+  --display-family:               var(--font-sans);
+  --display-weight:               var(--weight-light);
+  --display-tracking:             -0.02em;
+}
+
+
+/* ============================================================
+   DROP LETTER — independent axis from typeset.
+   A paragraph can be alt while its drop cap stays default
+   Sanomat, and vice versa — all four combinations are legal.
+
+   Applied via class on the <p> in rich-text:
+     .has-drop-cap                        → default (Sanomat)
+     .has-drop-cap.is-style-dropcap-alt   → alt (National Light)
+
+   --dropcap-family and --dropcap-weight pick the face; they
+   apply on every browser.
+
+   --dropcap-size-scale and --dropcap-nudge are FALLBACK ONLY,
+   consumed by the @supports-not branch in rich-text.css for
+   browsers without `initial-letter` (currently Firefox). On
+   supported browsers, the spec sizes the drop from font
+   metrics so cap-height = 3 body lines and baseline = line 3
+   baseline — no multipliers needed, robust to body changes.
+
+   The fallback scales are calibrated empirically per face
+   since Publico, Sanomat and National have different
+   cap-height ratios at the same font-size.
+   ============================================================ */
+
+:root {
+  --dropcap-family:     var(--font-display);
+  --dropcap-weight:     var(--weight-semibold);
+  --dropcap-size-scale: 4.65;
+  /* Optical nudge — pulls the float up to align cap-top with
+     line 1's cap and baseline with line 3's baseline.
+     Calibrated empirically per (drop face × body face) pair
+     since Publico and National sit at slightly different
+     baselines within the invariant line box. */
+  --dropcap-nudge:      -0.025em;       /* Sanomat, any body  */
+}
+
+.is-style-dropcap-alt {
+  --dropcap-family:     var(--font-sans);
+  --dropcap-weight:     var(--weight-light);
+  --dropcap-size-scale: 6.1175;         /* National needs more size
+                                           to match Sanomat's optical
+                                           cap-height at the drop. */
+  --dropcap-nudge:      -0.095em;       /* National on serif  */
+}
+
+/* National Light drop sitting in a sans (alt) paragraph
+   needs less correction — the body's baseline lands closer
+   to the drop's. Ancestor match catches data-typeset="alt"
+   set on .rich-text or any wrapper above it. */
+[data-typeset="alt"] .is-style-dropcap-alt {
+  --dropcap-nudge:      -0.07em;        /* National on sans   */
+}
+
+
+/* ============================================================
+   RICH-TEXT AXES — per-element face toggles inside .rich-text.
+
+   Each axis is set via a data-* attribute on any ancestor of
+   the target element (post wrapper, Group block, .rich-text,
+   or anything in between). CSS custom properties cascade so
+   the closest ancestor wins.
+
+   Semantics: "alt" means SWAP relative to body — not an
+   absolute value. Nesting alt on an already-alt body returns
+   to the default face (not not = original).
+
+     body serif + h2 alt → h2 sans   (swap)
+     body sans  + h2 alt → h2 serif  (swap → back to default)
+
+   The mechanism uses three twin tokens that always carry the
+   opposite of the body typeset:
+     --typeset-family-swapped
+     --typeset-size-scale-swapped
+     --typeset-leading-scale-swapped
+
+   On alt, H2/H3 consume all three so the swap-faced heading
+   gets the right optical size AND keeps the body's invariant
+   computed line-height — National at 1.16× looks the same
+   visual size as Publico at 1×; the leading inverse keeps
+   23.8px line boxes whether the heading is serif or sans.
+
+   Axes:
+     data-h2          h2  (default | alt)
+     data-h3          h3  (default | alt)
+     data-ol-marker   ol marker face (default | alt) — size
+                      is fixed at 17px regardless of body.
+   ============================================================ */
+
+[data-h2="alt"] {
+  --h2-family:        var(--typeset-family-swapped);
+  --h2-size-scale:    var(--typeset-size-scale-swapped);
+  --h2-leading-scale: var(--typeset-leading-scale-swapped);
+}
+[data-h3="alt"] {
+  --h3-family:        var(--typeset-family-swapped);
+  --h3-size-scale:    var(--typeset-size-scale-swapped);
+  --h3-leading-scale: var(--typeset-leading-scale-swapped);
+}
+[data-ol-marker="alt"]  { --ol-marker-family: var(--typeset-family-swapped); }
+
+/* Explicit reset — lets a nested block override an inherited
+   alt back to the body face without unsetting the attribute. */
+[data-h2="default"] {
+  --h2-family:        var(--typeset-family);
+  --h2-size-scale:    var(--typeset-size-scale);
+  --h2-leading-scale: var(--typeset-leading-scale);
+}
+[data-h3="default"] {
+  --h3-family:        var(--typeset-family);
+  --h3-size-scale:    var(--typeset-size-scale);
+  --h3-leading-scale: var(--typeset-leading-scale);
+}
+[data-ol-marker="default"] { --ol-marker-family: var(--typeset-family); }
+
+
+/* ============================================================
+   TYPE ROLES — what components consume.
+   Each role is a single class. Uses calc() so [data-typeset]
+   toggles cascade through automatically.
+
+   Naming: t-shirt scale (xs / sm / md / lg / xl / 2xl).
+   Sizes are absolute across the whole type system, so
+   display-sm is larger than body but smaller than display-md
+   (when added). Body and display share the same scale axis.
+   ============================================================ */
+
+.text-display-sm {
+  font-family:    var(--display-family);
+  font-size:      calc(1.8125rem * var(--typeset-size-scale));   /* 29 */
+  line-height:    calc(1.1       * var(--typeset-leading-scale));
+  font-weight:    var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  margin: 0;
+}
+
+.text-display-xs {
+  font-family:    var(--display-family);
+  font-size:      calc(1.25rem   * var(--typeset-size-scale));   /* 20 */
+  line-height:    calc(1.2       * var(--typeset-leading-scale));
+  font-weight:    var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  margin: 0;
+}
+
+.text-body,
+.rich-text {
+  font-family:    var(--typeset-family);
+  font-size:      calc(1.0625rem * var(--typeset-size-scale));   /* 17 */
+  line-height:    calc(1.4       * var(--typeset-leading-scale));
+  font-weight:    var(--weight-book);
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.text-body-sm {
+  font-family:    var(--typeset-family);
+  font-size:      calc(0.96875rem * var(--typeset-size-scale));  /* 15.5 */
+  line-height:    calc(1.4        * var(--typeset-leading-scale));
+  font-weight:    var(--weight-book);
+  letter-spacing: 0;
+  margin: 0;
+}

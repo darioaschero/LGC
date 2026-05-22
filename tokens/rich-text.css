@@ -1,0 +1,171 @@
+/* ============================================================
+   RICH TEXT — the .rich-text wrapper applies design-system
+   typography to plain semantic HTML (the output of a CMS
+   editor like Gutenberg, but framework-agnostic).
+
+   Rules inside this file map HTML tags → behaviour. Components
+   outside .rich-text use the utility classes (.text-body etc.).
+
+   Vertical rhythm uses the project spacing scale (--space-*),
+   not the `lh` unit — keeps the rich-text rhythm in step with
+   the rest of the layout system rather than the running line.
+   ============================================================ */
+
+/* ── Numerals: old-style by default in body prose ─────────
+   Old-style figures have ascenders & descenders like lowercase
+   letters — they read naturally inside running text. */
+.rich-text {
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+/* List markers use lining (cap-height) + tabular figures so
+   "11." "12." "100." all align at the decimal point.
+   Markers render in semibold by default; face follows the
+   body typeset, swapped via data-ol-marker="alt" on any
+   ancestor (see semantic.css RICH-TEXT AXES). Size is fixed
+   at 17px regardless of body typeset so numerals read the
+   same weight in any context. ───────────────────────── */
+.rich-text ol > li::marker {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-weight:          var(--weight-semibold);
+  font-family:          var(--ol-marker-family, var(--typeset-family));
+  font-size:            1.0625rem;
+}
+
+/* ── Reset margins on direct children we control.
+   :where() keeps the selector match but zeroes its specificity,
+   so the rhythm rule below (lower specificity by default) can
+   still apply its margin-block-start. ───────────────────── */
+:where(.rich-text > p,
+       .rich-text > ul,
+       .rich-text > ol,
+       .rich-text > h2,
+       .rich-text > h3) {
+  margin: 0;
+}
+
+/* ── Vertical rhythm: every direct child after another gets
+   the default gap above it. Pattern A (top-only): only
+   margin-block-start, never block-end, so the system is
+   robust to block/flex/grid contexts (no margin collapse). */
+.rich-text > * + * {
+  margin-block-start: var(--space-12);
+}
+
+/* Heading top spacing. Below uses the default --space-12. */
+.rich-text > * + h2 { margin-block-start: var(--space-48); }
+.rich-text > * + h3 { margin-block-start: var(--space-24); }
+
+/* ── Headings ────────────────────────────────────────────
+   H2 and H3 are body-styled (not display), with semibold +
+   wider tracking + high-contrast color. H2 adds all-small-caps
+   for a strong editorial section divider.
+
+   font-family / font-size / line-height consume per-element
+   axis tokens (see semantic.css RICH-TEXT AXES). On alt the
+   size and leading flip to the swapped typeset's, so a
+   serif-on-sans-body heading optically matches a serif-on-
+   serif-body heading, and computed line-height in px stays
+   invariant. Tokens fall back to the body typeset when unset. */
+.rich-text h2 {
+  font-family:       var(--h2-family,         var(--typeset-family));
+  font-size:         calc(1.0625rem * var(--h2-size-scale,    var(--typeset-size-scale)));
+  line-height:       calc(1.4       * var(--h2-leading-scale, var(--typeset-leading-scale)));
+  font-weight:       var(--weight-semibold);
+  letter-spacing:    0.02em;
+  font-variant-caps: all-small-caps;
+  color:             var(--fg-high-contrast);
+}
+
+.rich-text h3 {
+  font-family:       var(--h3-family,         var(--typeset-family));
+  font-size:         calc(1.0625rem * var(--h3-size-scale,    var(--typeset-size-scale)));
+  line-height:       calc(1.4       * var(--h3-leading-scale, var(--typeset-leading-scale)));
+  font-weight:       var(--weight-semibold);
+  letter-spacing:    0;          /* tracking unchanged from body — only h2 widens for the small-caps treatment */
+  font-variant-caps: normal;     /* h3 is plain semibold body, not small-caps (which is the h2 treatment) */
+  color:             var(--fg-high-contrast);
+}
+
+/* ── Lists ──────────────────────────────────────────────── */
+.rich-text ul,
+.rich-text ol {
+  padding-inline-start: var(--space-24);
+}
+.rich-text li + li {
+  margin-block-start: var(--space-12);
+}
+.rich-text li > ul,
+.rich-text li > ol {
+  margin-block-start: var(--space-12);
+}
+.rich-text li > p {        /* paragraphs nested inside list items */
+  margin: 0;
+}
+.rich-text li > p + p {
+  margin-block-start: var(--space-12);
+}
+
+/* ── Inline emphasis ────────────────────────────────────── */
+.rich-text strong,
+.rich-text b {
+  font-weight: var(--weight-semibold);
+  color: var(--fg-high-contrast);
+}
+.rich-text em,
+.rich-text i {
+  font-style: italic;
+}
+
+/* ── Drop letter ─────────────────────────────────────────
+   Three-line drop cap on paragraphs explicitly marked
+   .has-drop-cap (Gutenberg's native class for the Paragraph
+   block's Drop cap toggle). Variant via .is-style-dropcap-alt.
+
+   Primary path: the CSS `initial-letter` property. The browser
+   computes the drop's font-size from the chosen face's metrics
+   so the cap-height spans exactly 3 body lines, and aligns its
+   baseline with line 3's baseline. Robust to any body-text
+   change — including clamp() responsive sizing — because the
+   spec ties the drop to the body's own line metrics rather
+   than to a hard-coded multiplier.
+
+   Fallback path (inside @supports not): float + line-height
+   + manually calibrated --dropcap-size-scale and -nudge. Used
+   only by browsers that don't yet implement initial-letter
+   (currently Firefox). Calibration is tied to the present body
+   font-size; if body adopts clamp, fallback values will need
+   re-tuning.
+
+   Caveat: ::first-letter includes any leading punctuation
+   (quotes, parens, em-dashes), which will render enlarged
+   together with the letter. This is the browser default and
+   accepted. For paragraphs where this is undesired, wrap the
+   letter in a span and target that instead. */
+.rich-text p.has-drop-cap::first-letter {
+  font-family:       var(--dropcap-family);
+  font-weight:       var(--dropcap-weight);
+  color:             var(--fg-high-contrast);
+  margin-inline-end: var(--space-12);
+
+  -webkit-initial-letter: 3;
+          initial-letter: 3;
+}
+
+@supports not (initial-letter: 3) {
+  .rich-text p.has-drop-cap::first-letter {
+    font-size:          calc(var(--dropcap-size-scale) * 1.0625rem);
+    line-height:        1;
+    float:              left;
+    /* Per-context optical nudge — see --dropcap-nudge in
+       semantic.css; varies by (drop face × body face). */
+    margin-block-start: var(--dropcap-nudge);
+    /* Trim the float's wrap zone to exactly 3 body lines.
+       Float content-height = font-size (line-height: 1), which
+       exceeds 3 × body line-height for both variants. The
+       negative margin-block-end pulls the wrap boundary up to
+       3 body lines exactly, so line 4 flows flush left right
+       after line 3. */
+    margin-block-end:   calc((3 * 1.4 - var(--dropcap-size-scale)) * 1.0625rem);
+  }
+}

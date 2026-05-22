@@ -1,0 +1,37 @@
+<!--
+  Sidebar partial — single source of truth for the docs nav.
+  Loaded into #sidebar-mount on each page via docs.js.
+
+  Each group is a <details> with one <summary> + a list of links.
+  Open by default for now; can switch to "only current group open"
+  when the system grows.
+
+  Links use absolute paths (root-relative) so the partial is
+  identical regardless of which subfolder it's injected into.
+-->
+<aside class="sidebar" aria-label="Documentation">
+  <nav class="nav">
+    <details class="nav-group" open>
+      <summary class="nav-summary">Foundations</summary>
+      <ul class="nav-list">
+        <li><a href="foundations/colour.html"     class="nav-link">Colour</a></li>
+        <li><a href="foundations/typography.html" class="nav-link">Typography</a></li>
+        <li><a href="foundations/spacing.html"    class="nav-link">Spacing</a></li>
+      </ul>
+    </details>
+
+    <details class="nav-group" open>
+      <summary class="nav-summary">Components</summary>
+      <ul class="nav-list">
+        <li><a href="components/rich-text.html" class="nav-link">Rich text</a></li>
+      </ul>
+    </details>
+
+    <details class="nav-group" open>
+      <summary class="nav-summary">Templates</summary>
+      <ul class="nav-list">
+        <li class="nav-disabled">Coming soon</li>
+      </ul>
+    </details>
+  </nav>
+</aside>

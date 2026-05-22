@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="..">
+  <title>GC — Colour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tokens/fonts.css">
+  <link rel="stylesheet" href="tokens/primitives.css">
+  <link rel="stylesheet" href="tokens/semantic.css">
+  <link rel="stylesheet" href="tokens/rich-text.css">
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="wordmark">GC</span>
+      <span class="breadcrumb">Design System · v0.1</span>
+    </div>
+    <div class="toggles">
+      <button class="toggle" id="mode-toggle" type="button" aria-label="Toggle color mode">Mode: light</button>
+    </div>
+  </header>
+
+  <div id="sidebar-mount"></div>
+
+  <main>
+    <section>
+      <div class="section-label">Foundations</div>
+      <h2>Colour</h2>
+      <p class="section-desc">
+        Two layers. The <em>neutral ramp</em> is the only raw colour data in the system &mdash; perceptually scaled in OKLCH, never referenced by components directly. The <em>semantic surfaces</em> sit on top: tokens like <code>--bg</code>, <code>--fg</code>, <code>--border</code> that resolve to a ramp step via <code>light-dark()</code>. Components consume only these.
+      </p>
+
+      <h3>Neutral ramp</h3>
+      <p class="section-desc">
+        Thirteen steps from <code>neutral-0</code> (white) to <code>neutral-1000</code> (black), perceptually even. Defined in OKLCH so each step looks the same distance from the next; defined as raw values so the semantic layer can pick any step it likes.
+      </p>
+      <div class="ramp" id="ramp"></div>
+
+      <h3>Semantic surfaces</h3>
+      <p class="section-desc">
+        Six tokens. Each resolves to one neutral step in light mode and a different step in dark mode, via the native <code>light-dark()</code> function. No duplicated <code>[data-mode]</code> blocks &mdash; the same token returns the right value automatically.
+      </p>
+
+      <div class="sem">
+        <div class="sem-h">Token</div>
+        <div class="sem-h">Resolves to (light / dark)</div>
+        <div class="sem-h">Preview</div>
+
+        <div class="sem-row">
+          <div class="sem-name">--bg</div>
+          <div class="sem-resolve">neutral-0&nbsp;&nbsp;/&nbsp;&nbsp;neutral-1000</div>
+          <div><div class="preview" style="background:var(--bg); border:1px solid var(--border);"></div></div>
+        </div>
+
+        <div class="sem-row">
+          <div class="sem-name">--bg-subtle</div>
+          <div class="sem-resolve">neutral-100&nbsp;&nbsp;/&nbsp;&nbsp;neutral-900</div>
+          <div><div class="preview" style="background:var(--bg-subtle);"></div></div>
+        </div>
+
+        <div class="sem-row">
+          <div class="sem-name">--fg</div>
+          <div class="sem-resolve">neutral-800&nbsp;&nbsp;/&nbsp;&nbsp;neutral-100</div>
+          <div><div class="preview text" style="color:var(--fg);">The quick brown fox jumps over the lazy dog</div></div>
+        </div>
+
+        <div class="sem-row">
+          <div class="sem-name">--fg-high-contrast</div>
+          <div class="sem-resolve">neutral-900&nbsp;&nbsp;/&nbsp;&nbsp;neutral-50</div>
+          <div><div class="preview text" style="color:var(--fg-high-contrast);">The quick brown fox jumps over the lazy dog</div></div>
+        </div>
+
+        <div class="sem-row">
+          <div class="sem-name">--fg-muted</div>
+          <div class="sem-resolve">neutral-600&nbsp;&nbsp;/&nbsp;&nbsp;neutral-400</div>
+          <div><div class="preview text" style="color:var(--fg-muted);">The quick brown fox jumps over the lazy dog</div></div>
+        </div>
+
+        <div class="sem-row">
+          <div class="sem-name">--border</div>
+          <div class="sem-resolve">neutral-200&nbsp;&nbsp;/&nbsp;&nbsp;neutral-800</div>
+          <div><div class="preview line" style="background:var(--border);"></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="docs.js"></script>
+  <script>
+    // Render neutral ramp from the actual CSS variables.
+    (() => {
+      const steps = [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 1000];
+      const ramp  = document.getElementById('ramp');
+      const cs    = getComputedStyle(document.documentElement);
+      ramp.innerHTML = steps.map(s => {
+        const varName = `--color-neutral-${s}`;
+        const val     = cs.getPropertyValue(varName).trim();
+        const onColor = s <= 400 ? 'dark' : 'light';
+        return `
+          <div class="swatch" data-on="${onColor}" style="background: var(${varName});">
+            <span class="step">${s}</span>
+            <span class="val">${val}</span>
+          </div>`;
+      }).join('');
+    })();
+  </script>
+</body>
+</html>
